@@ -1,4 +1,4 @@
-package endpoints;
+package com.publicdata.us.endpoints;
 
 public interface PopulationDataEndpoint {
 
