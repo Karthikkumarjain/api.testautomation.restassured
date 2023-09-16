@@ -33,9 +33,9 @@ class PopulationDataTest extends PopulationDataBase {
         Response response = given().when().get(PopulationDataEndpoint.ENDPOINT).then().extract().response();
 
         //    List<Map<String,?>> nationName = response.path("data.findAll {it.Nation == 'United States'}");
-        String nationName = response.jsonPath().getString("?[?(@.Nation=='United States')].Nation");
+       // String nationName = response.jsonPath().getString("?[?(@.Nation=='United States')].Nation");
 
-        System.out.println(nationName);
+        //System.out.println(nationName);
 
     }
 
