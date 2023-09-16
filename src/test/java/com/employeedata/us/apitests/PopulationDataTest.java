@@ -1,6 +1,7 @@
 package com.employeedata.us.apitests;
 
 import com.employeedata.us.base.PopulationDataBase;
+import com.employeedata.us.constants.FrameworkConstants;
 import com.employeedata.us.endpoints.PopulationDataEndpoint;
 import io.restassured.module.jsv.JsonSchemaValidator;
 import io.restassured.response.Response;
@@ -20,7 +21,7 @@ class PopulationDataTest extends PopulationDataBase {
                 .get(PopulationDataEndpoint.ENDPOINT)
                 .then().assertThat()
                 .statusCode(equalTo(200))
-                .body(JsonSchemaValidator.matchesJsonSchemaInClasspath("schemas/json/PopulationData.json"));
+                .body(JsonSchemaValidator.matchesJsonSchemaInClasspath(FrameworkConstants.getInstance().getResponseSchemaPath()+"PopulationData.json"));
 
     }
 

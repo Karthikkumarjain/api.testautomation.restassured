@@ -2,6 +2,7 @@ package com.employeedata.us.apitests;
 
 import com.employeedata.us.EmployeeData;
 import com.employeedata.us.base.EmployeeCreationBase;
+import com.employeedata.us.constants.FrameworkConstants;
 import com.employeedata.us.endpoints.EmployeeCreationEndpoint;
 import io.restassured.module.jsv.JsonSchemaValidator;
 import io.restassured.response.Response;
@@ -27,7 +28,7 @@ class EmployeeCreationTest extends EmployeeCreationBase {
                 .when()
                 .post(EmployeeCreationEndpoint.ENDPOINT)
                 .then()
-                .body(JsonSchemaValidator.matchesJsonSchemaInClasspath("schemas/json/createEmployeeData.json"))
+                .body(JsonSchemaValidator.matchesJsonSchemaInClasspath(FrameworkConstants.getInstance().getResponseSchemaPath()+"createEmployeeData.json"))
                 .body("name",equalTo("TestDataName"))
                 .extract().response();
 
