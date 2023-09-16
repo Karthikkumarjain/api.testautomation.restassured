@@ -2,11 +2,15 @@ name: sit-run-test
 
 
 on:
+  schedule:
+    - cron: '0 22 * * *'
   push:
     branches:
       - master
   pull_request:
     types: [ opened,synchronize,reopened ]
+  workflow_dispatch:
+
 
 jobs:
   build:
