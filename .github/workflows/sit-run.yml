@@ -4,10 +4,10 @@ name: sit-run-test
 on:
   push:
     branches:
-      -master
+      - master
   pull_request:
     types: [ opened,synchronize,reopened ]
-    workflow_dispatch: #To manually trigger
+
 jobs:
   build:
     runs-on: ubuntu-latest
