@@ -1,4 +1,4 @@
-package com.publicdata.us.base;
+package com.employeedata.us.base;
 
 import io.restassured.RestAssured;
 import io.restassured.builder.RequestSpecBuilder;

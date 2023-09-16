@@ -1,0 +1,329 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "data": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "ID Nation": {
+              "type": "string"
+            },
+            "Nation": {
+              "type": "string"
+            },
+            "ID Year": {
+              "type": "integer"
+            },
+            "Year": {
+              "type": "string"
+            },
+            "Population": {
+              "type": "integer"
+            },
+            "Slug Nation": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "ID Nation",
+            "Nation",
+            "ID Year",
+            "Year",
+            "Population",
+            "Slug Nation"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "ID Nation": {
+              "type": "string"
+            },
+            "Nation": {
+              "type": "string"
+            },
+            "ID Year": {
+              "type": "integer"
+            },
+            "Year": {
+              "type": "string"
+            },
+            "Population": {
+              "type": "integer"
+            },
+            "Slug Nation": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "ID Nation",
+            "Nation",
+            "ID Year",
+            "Year",
+            "Population",
+            "Slug Nation"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "ID Nation": {
+              "type": "string"
+            },
+            "Nation": {
+              "type": "string"
+            },
+            "ID Year": {
+              "type": "integer"
+            },
+            "Year": {
+              "type": "string"
+            },
+            "Population": {
+              "type": "integer"
+            },
+            "Slug Nation": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "ID Nation",
+            "Nation",
+            "ID Year",
+            "Year",
+            "Population",
+            "Slug Nation"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "ID Nation": {
+              "type": "string"
+            },
+            "Nation": {
+              "type": "string"
+            },
+            "ID Year": {
+              "type": "integer"
+            },
+            "Year": {
+              "type": "string"
+            },
+            "Population": {
+              "type": "integer"
+            },
+            "Slug Nation": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "ID Nation",
+            "Nation",
+            "ID Year",
+            "Year",
+            "Population",
+            "Slug Nation"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "ID Nation": {
+              "type": "string"
+            },
+            "Nation": {
+              "type": "string"
+            },
+            "ID Year": {
+              "type": "integer"
+            },
+            "Year": {
+              "type": "string"
+            },
+            "Population": {
+              "type": "integer"
+            },
+            "Slug Nation": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "ID Nation",
+            "Nation",
+            "ID Year",
+            "Year",
+            "Population",
+            "Slug Nation"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "ID Nation": {
+              "type": "string"
+            },
+            "Nation": {
+              "type": "string"
+            },
+            "ID Year": {
+              "type": "integer"
+            },
+            "Year": {
+              "type": "string"
+            },
+            "Population": {
+              "type": "integer"
+            },
+            "Slug Nation": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "ID Nation",
+            "Nation",
+            "ID Year",
+            "Year",
+            "Population",
+            "Slug Nation"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "ID Nation": {
+              "type": "string"
+            },
+            "Nation": {
+              "type": "string"
+            },
+            "ID Year": {
+              "type": "integer"
+            },
+            "Year": {
+              "type": "string"
+            },
+            "Population": {
+              "type": "integer"
+            },
+            "Slug Nation": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "ID Nation",
+            "Nation",
+            "ID Year",
+            "Year",
+            "Population",
+            "Slug Nation"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "ID Nation": {
+              "type": "string"
+            },
+            "Nation": {
+              "type": "string"
+            },
+            "ID Year": {
+              "type": "integer"
+            },
+            "Year": {
+              "type": "string"
+            },
+            "Population": {
+              "type": "integer"
+            },
+            "Slug Nation": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "ID Nation",
+            "Nation",
+            "ID Year",
+            "Year",
+            "Population",
+            "Slug Nation"
+          ]
+        }
+      ]
+    },
+    "source": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "measures": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "string"
+                }
+              ]
+            },
+            "annotations": {
+              "type": "object",
+              "properties": {
+                "source_name": {
+                  "type": "string"
+                },
+                "source_description": {
+                  "type": "string"
+                },
+                "dataset_name": {
+                  "type": "string"
+                },
+                "dataset_link": {
+                  "type": "string"
+                },
+                "table_id": {
+                  "type": "string"
+                },
+                "topic": {
+                  "type": "string"
+                },
+                "subtopic": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "source_name",
+                "source_description",
+                "dataset_name",
+                "dataset_link",
+                "table_id",
+                "topic",
+                "subtopic"
+              ]
+            },
+            "name": {
+              "type": "string"
+            },
+            "substitutions": {
+              "type": "array",
+              "items": {}
+            }
+          },
+          "required": [
+            "measures",
+            "annotations",
+            "name",
+            "substitutions"
+          ]
+        }
+      ]
+    }
+  },
+  "required": [
+    "data",
+    "source"
+  ]
+}

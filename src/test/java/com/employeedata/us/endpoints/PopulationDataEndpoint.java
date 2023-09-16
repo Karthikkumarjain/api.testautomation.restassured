@@ -1,4 +1,4 @@
-package com.publicdata.us.endpoints;
+package com.employeedata.us.endpoints;
 
 public interface PopulationDataEndpoint {
 
