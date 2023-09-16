@@ -20,7 +20,7 @@ public class EmployeeData {
 
     private String name;
     private String job;
-    @JsonIgnore
-    private int salary;
+   private int id;
+   private String createdAt;
 
 }

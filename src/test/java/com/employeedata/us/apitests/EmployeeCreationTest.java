@@ -32,5 +32,8 @@ class EmployeeCreationTest extends EmployeeCreationBase {
                 .body("name",equalTo("TestDataName"))
                 .extract().response();
 
+        EmployeeData empData = response.getBody().as(EmployeeData.class);
+      //  System.out.println(empData.getJob());
+        Assertions.assertThat(empData.getJob()).isEqualTo("Developer");
     }
 }
