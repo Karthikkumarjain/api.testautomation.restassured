@@ -21,7 +21,7 @@ class PopulationDataTest extends PopulationDataBase {
                 .get(PopulationDataEndpoint.ENDPOINT)
                 .then().assertThat()
                 .statusCode(equalTo(200))
-                .body(JsonSchemaValidator.matchesJsonSchemaInClasspath(FrameworkConstants.getInstance().getResponseSchemaPath()+"PopulationData.json"));
+                .body(JsonSchemaValidator.matchesJsonSchemaInClasspath(FrameworkConstants.getInstance().getResponseSchemaPathJson()+"PopulationData.json"));
 
     }
 

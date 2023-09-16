@@ -23,6 +23,7 @@ public class FrameworkConstants {
 
 
   //  private  final String responseSchemaPath = System.getProperty("user.dir") + "schemas/json/";
-      private  final String responseSchemaPath = "schemas/json/";
+      private  final String responseSchemaPathJson = "schemas/json/";
+    private  final String responseSchemaPathXml = "schemas/xsd/";
 
 }

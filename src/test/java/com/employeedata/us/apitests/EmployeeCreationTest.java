@@ -28,7 +28,7 @@ class EmployeeCreationTest extends EmployeeCreationBase {
                 .when()
                 .post(EmployeeCreationEndpoint.ENDPOINT)
                 .then()
-                .body(JsonSchemaValidator.matchesJsonSchemaInClasspath(FrameworkConstants.getInstance().getResponseSchemaPath()+"createEmployeeData.json"))
+                .body(JsonSchemaValidator.matchesJsonSchemaInClasspath(FrameworkConstants.getInstance().getResponseSchemaPathJson()+"createEmployeeData.json"))
                 .body("name",equalTo("TestDataName"))
                 .extract().response();
 
