@@ -24,5 +24,8 @@ public class TravellerDetailsTest  extends TravellerDetailsBase {
                 .body(RestAssuredMatchers.matchesXsdInClasspath(FrameworkConstants.getInstance().getResponseSchemaPathXml()+"travellerdetails.xsd"));
 
 
+
+
+
     }
 }
