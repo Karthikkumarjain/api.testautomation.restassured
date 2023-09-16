@@ -21,5 +21,4 @@ jobs:
         java-version: '11'
         distribution: 'temurin'
         cache: maven
-    - name: Build with maven
-      run: mvn test -B package --file pom.xml
+    - run: mvn clean test -Psystem-tests
