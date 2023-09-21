@@ -6,10 +6,11 @@ import com.employeedata.us.constants.FrameworkConstants;
 import com.employeedata.us.endpoints.EmployeeCreationEndpoint;
 import io.restassured.module.jsv.JsonSchemaValidator;
 import io.restassured.response.Response;
-import org.assertj.core.api.Assertions;
+import org.assertj.core.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 
 import static io.restassured.RestAssured.*;
+import static org.assertj.core.api.Assertions.assertThat;
 import static org.hamcrest.Matchers.equalTo;
 
 class EmployeeCreationTest extends EmployeeCreationBase {
@@ -28,12 +29,15 @@ class EmployeeCreationTest extends EmployeeCreationBase {
                 .when()
                 .post(EmployeeCreationEndpoint.ENDPOINT)
                 .then()
-                .body(JsonSchemaValidator.matchesJsonSchemaInClasspath(FrameworkConstants.getInstance().getResponseSchemaPathJson()+"createEmployeeData.json"))
-                .body("name",equalTo("TestDataName"))
+                .body(JsonSchemaValidator.matchesJsonSchemaInClasspath(FrameworkConstants.getInstance().getResponseSchemaPathJson() + "createEmployeeData.json"))
+                .body("name", equalTo("TestDataName"))
                 .extract().response();
 
         EmployeeData empData = response.getBody().as(EmployeeData.class);
-      //  System.out.println(empData.getJob());
-        Assertions.assertThat(empData.getJob()).isEqualTo("Developer");
+        //  System.out.println(empData.getJob());
+        assertThat(empData.getJob()).isEqualTo("Developer");
+        assertThat(response.getStatusCode()).isEqualTo(201);
+
+
     }
 }

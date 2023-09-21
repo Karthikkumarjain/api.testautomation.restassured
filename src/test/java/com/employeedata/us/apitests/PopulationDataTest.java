@@ -5,6 +5,7 @@ import com.employeedata.us.constants.FrameworkConstants;
 import com.employeedata.us.endpoints.PopulationDataEndpoint;
 import io.restassured.module.jsv.JsonSchemaValidator;
 import io.restassured.response.Response;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import static io.restassured.RestAssured.*;
@@ -22,20 +23,6 @@ class PopulationDataTest extends PopulationDataBase {
                 .then().assertThat()
                 .statusCode(equalTo(200))
                 .body(JsonSchemaValidator.matchesJsonSchemaInClasspath(FrameworkConstants.getInstance().getResponseSchemaPathJson()+"PopulationData.json"));
-
-    }
-
-
-    @Test
-    void verifyTheResponseContent() {
-
-
-        Response response = given().when().get(PopulationDataEndpoint.ENDPOINT).then().extract().response();
-
-        //    List<Map<String,?>> nationName = response.path("data.findAll {it.Nation == 'United States'}");
-       // String nationName = response.jsonPath().getString("?[?(@.Nation=='United States')].Nation");
-
-        //System.out.println(nationName);
 
     }
 
