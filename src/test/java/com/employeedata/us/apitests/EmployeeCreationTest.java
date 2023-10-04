@@ -6,7 +6,6 @@ import com.employeedata.us.constants.FrameworkConstants;
 import com.employeedata.us.endpoints.EmployeeCreationEndpoint;
 import io.restassured.module.jsv.JsonSchemaValidator;
 import io.restassured.response.Response;
-import org.assertj.core.api.Assertions.*;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
