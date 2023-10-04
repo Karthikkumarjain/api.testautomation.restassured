@@ -7,6 +7,7 @@ import com.employeedata.us.endpoints.EmployeeCreationEndpoint;
 import io.restassured.module.jsv.JsonSchemaValidator;
 import io.restassured.response.Response;
 import org.assertj.core.api.Assertions.*;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static io.restassured.RestAssured.*;
@@ -17,6 +18,7 @@ class EmployeeCreationTest extends EmployeeCreationBase {
 
 
     @Test
+    @DisplayName("Create Employee Data service is up and running")
     void EmployeeCreationServiceTest() {
 
         EmployeeData employeeData = new EmployeeData().builder()

@@ -6,6 +6,7 @@ import com.employeedata.us.endpoints.PopulationDataEndpoint;
 import io.restassured.module.jsv.JsonSchemaValidator;
 import io.restassured.response.Response;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static io.restassured.RestAssured.*;
@@ -15,6 +16,7 @@ class PopulationDataTest extends PopulationDataBase {
 
 
     @Test
+    @DisplayName("Verify the Population Data service is up and running")
     void verifyTheServiceIsUpTest() {
 
 

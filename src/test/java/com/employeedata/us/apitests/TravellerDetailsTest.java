@@ -6,6 +6,7 @@ import com.employeedata.us.constants.FrameworkConstants;
 import com.employeedata.us.endpoints.TravellerDetailsEndpoint;
 import io.restassured.RestAssured;
 import io.restassured.matcher.RestAssuredMatchers;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static io.restassured.RestAssured.*;
@@ -14,6 +15,7 @@ public class TravellerDetailsTest  extends TravellerDetailsBase {
 
 
     @Test
+    @DisplayName("Verify the Traveller Details service is up and running")
     void verfiyServiceisUpTest(){
 
 
