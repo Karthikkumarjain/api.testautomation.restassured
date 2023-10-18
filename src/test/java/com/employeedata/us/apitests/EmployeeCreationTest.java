@@ -46,7 +46,7 @@ class EmployeeCreationTest extends EmployeeCreationBase {
 
 
     @Test
-    @DisplayName("Create Employee Data service is up and running")
+    @DisplayName("Create Employee Data service is up and running with the help of Record in Java")
     void EmployeeCreationServiceWithRecordTest() {
 
         EmployeeDatainRecord employeeDatainRecord = new EmployeeDatainRecord("Karthik","Tester",null,null);
