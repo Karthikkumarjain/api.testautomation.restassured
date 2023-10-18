@@ -1,6 +1,7 @@
 package com.employeedata.us.apitests;
 
 import com.employeedata.us.EmployeeData;
+import com.employeedata.us.EmployeeDatainRecord;
 import com.employeedata.us.base.EmployeeCreationBase;
 import com.employeedata.us.constants.FrameworkConstants;
 import com.employeedata.us.endpoints.EmployeeCreationEndpoint;
@@ -38,6 +39,31 @@ class EmployeeCreationTest extends EmployeeCreationBase {
         //  System.out.println(empData.getJob());
         assertThat(empData.getJob()).isEqualTo("Developer");
         assertThat(response.getStatusCode()).isEqualTo(201);
+
+
+    }
+
+
+
+    @Test
+    @DisplayName("Create Employee Data service is up and running")
+    void EmployeeCreationServiceWithRecordTest() {
+
+        EmployeeDatainRecord employeeDatainRecord = new EmployeeDatainRecord("Karthik","Tester",null,null);
+
+        Response response = given()
+                .body(employeeDatainRecord)
+                .when()
+                .post(EmployeeCreationEndpoint.ENDPOINT)
+                .then()
+                .body(JsonSchemaValidator.matchesJsonSchemaInClasspath(FrameworkConstants.getInstance().getResponseSchemaPathJson() + "createEmployeeData.json"))
+                .body("name", equalTo("Karthik"))
+                .extract().response();
+
+        EmployeeData empData = response.getBody().as(EmployeeData.class);
+        //  System.out.println(empData.getJob());
+        assertThat(employeeDatainRecord.job()).isEqualTo("Tester");
+        assertThat(employeeDatainRecord.name()).isEqualTo("Karthik");
 
 
     }
